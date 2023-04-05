@@ -2,15 +2,15 @@
 
 **Overview:**
 
-This mod adds three new behaviros to Minecraft's player movement system:
+This mod adds three new behaviors to Minecraft's player movement system, all of which can be toggled independently using keybinds.
 
-1. Step Up
-2. Coyote Time
-3. Boat Step Up
+1. Step Up: A less annoying version of auto jump that changes the player's step height from 0.6 blocks to 1.25 blocks.
+2. Coyote Time: Allows the player to jump up to 10 ticks (half a second) after falling off of a block, making longer jumps slightly more forgiving.
+3. Boat Step Up: Applies Step Up to boats, allowing them to climb up to one block at a time, rather than getting stuck on path blocks.
 
 **Notes:**
 
-- 
+- I am not currently planning on adding more content to this mod. However, feel free to suggest new behaviors through GitHub's feature request system, and I may consider adding them.
 
 **FAQs:**
 
