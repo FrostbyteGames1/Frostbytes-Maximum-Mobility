@@ -19,10 +19,6 @@ public abstract class BoatEntityMixin extends Entity {
 
     @Inject(method = "tick", at = @At("HEAD"))
     public void tick(CallbackInfo ci){
-        if (BoatChanger.boatStepUp){
-            this.setStepHeight(1);
-        } else {
-            this.setStepHeight(0);
-        }
+        this.setStepHeight(BoatChanger.boatStepUp);
     }
 }

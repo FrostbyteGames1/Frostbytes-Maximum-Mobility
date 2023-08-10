@@ -16,6 +16,9 @@
 	"entrypoints": {
 		"main": [
 			"net.frostbyte.mobility.MaximumMobility"
+		],
+		"modmenu": [
+			"net.frostbyte.mobility.config.ModMenuIntegration"
 		]
 	},
 	"mixins": [
