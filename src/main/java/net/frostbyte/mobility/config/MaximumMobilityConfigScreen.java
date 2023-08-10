@@ -115,7 +115,7 @@ public class MaximumMobilityConfigScreen extends Screen {
 
     @Override
     public void render(final DrawContext context, final int mouseX, final int mouseY, final float delta) {
-        this.renderBackground(context);
+        this.renderBackground(context, mouseX, mouseY, delta);
         context.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 20, 16777215);
         context.drawText(this.textRenderer, "Step Up Height", this.width / 2 - 60, this.height / 4 - 18, 16777215, false);
         context.drawText(this.textRenderer, "Boat Step Up Height", this.width / 2 - 60, this.height / 4 + 6, 16777215, false);
