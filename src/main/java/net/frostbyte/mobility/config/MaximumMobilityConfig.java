@@ -18,6 +18,7 @@ public class MaximumMobilityConfig {
     float stepUp = 1.25F;
     float boatStepUp = 1.0F;
     int coyoteTime = 10;
+    boolean reachAround = true;
 
     public void write() {
         try {
@@ -29,6 +30,7 @@ public class MaximumMobilityConfig {
             json.addProperty("stepUp", stepUp);
             json.addProperty("boatStepUp", boatStepUp);
             json.addProperty("coyoteTime", coyoteTime);
+            json.addProperty("reachAround", reachAround);
             Files.writeString(configFile, gson.toJson(json));
         } catch (IOException e) {
             e.printStackTrace();
@@ -48,8 +50,11 @@ public class MaximumMobilityConfig {
             if (json.has("boatStepUp")) {
                 boatStepUp = json.getAsJsonPrimitive("boatStepUp").getAsFloat();
             }
-            if (json.has("stackRefill")) {
+            if (json.has("coyoteTime")) {
                 coyoteTime = json.getAsJsonPrimitive("coyoteTime").getAsInt();
+            }
+            if (json.has("reachAround")) {
+                reachAround = json.getAsJsonPrimitive("reachAround").getAsBoolean();
             }
         } catch (IOException e) {
             e.printStackTrace();

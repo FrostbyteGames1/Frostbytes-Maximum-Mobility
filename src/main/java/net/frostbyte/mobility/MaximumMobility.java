@@ -19,6 +19,9 @@ public class MaximumMobility implements ModInitializer {
 
         BoatChanger boatChanger = new BoatChanger();
         ClientTickEvents.END_CLIENT_TICK.register(boatChanger);
+
+        BlockPlacementChanger blockPlacementChanger = new BlockPlacementChanger();
+        ClientTickEvents.END_CLIENT_TICK.register(blockPlacementChanger);
     }
 
 }

@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public final class StepChanger implements ClientTickEvents.EndTick{
+public final class StepChanger implements ClientTickEvents.EndTick {
 
     public final Path configFile = FabricLoader.getInstance().getConfigDir().resolve("frostbyte/maximum-mobility.json");
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
