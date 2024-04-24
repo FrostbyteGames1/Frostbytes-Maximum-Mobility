@@ -2,11 +2,12 @@
 
 **Overview:**
 
-This mod adds three new behaviors to Minecraft's player movement system, all of which can be customized independently using configs.
+This mod adds four new behaviors to Minecraft's player movement system, all of which can be customized independently using configs.
 
 1. Step Up: A less annoying version of auto jump that allows the player to climb up blocks without jumping.
 2. Coyote Time: Allows the player to jump up even after falling off of a block, making longer jumps slightly more forgiving.
 3. Boat Step Up: Applies Step Up to boats, allowing them to climb up to blocks like other rideable mobs.
+4. Reach Around Block Placement: Implements the Bedrock Edition ability to place blocks in front of the player.
 
 **Notes:**
 
