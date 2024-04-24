@@ -4,8 +4,7 @@
   "package": "net.frostbyte.mobility.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "BoatEntityMixin",
-    "InGameHudMixin"
+    "BoatEntityMixin"
   ],
   "client": [
   ],

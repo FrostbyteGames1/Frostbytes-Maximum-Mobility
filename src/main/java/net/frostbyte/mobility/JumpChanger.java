@@ -3,6 +3,8 @@ package net.frostbyte.mobility;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.MinecraftClient;
@@ -12,6 +14,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+@Environment(EnvType.CLIENT)
 public class JumpChanger implements ClientTickEvents.EndTick {
 
     public final Path configFile = FabricLoader.getInstance().getConfigDir().resolve("frostbyte/maximum-mobility.json");
@@ -37,23 +40,26 @@ public class JumpChanger implements ClientTickEvents.EndTick {
             if (json.has("coyoteTime"))
                 coyoteTime = json.getAsJsonPrimitive("coyoteTime").getAsInt();
         } catch (IOException e) {
-            e.printStackTrace();
+            MaximumMobility.LOGGER.error(e.getMessage());
         }
 
-        if (player.isOnGround()){
-            yValues[0] = player.getY();
-            yValues[1] = player.getY();
-        }
-
-        if (!player.isOnGround()) {
-            yValues[1] = player.getY();
-            fallingTicks ++;
-            if (fallingTicks < coyoteTime && player.input.jumping && yValues[1] < yValues[0]) {
-                player.jump();
-                fallingTicks = coyoteTime;
+        if (coyoteTime != 0) {
+            if (player.isOnGround()){
+                yValues[0] = player.getY();
+                yValues[1] = player.getY();
             }
-        } else {
-            fallingTicks = 0;
+
+            if (!player.isOnGround()) {
+                yValues[1] = player.getY();
+                fallingTicks ++;
+                if (fallingTicks < coyoteTime && player.input.jumping && yValues[1] < yValues[0]) {
+                    player.jump();
+                    fallingTicks = coyoteTime;
+                }
+            } else {
+                fallingTicks = 0;
+            }
         }
+
     }
 }

@@ -3,6 +3,8 @@ package net.frostbyte.mobility;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.MinecraftClient;
@@ -12,8 +14,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+@Environment(EnvType.CLIENT)
 public class BoatChanger implements ClientTickEvents.EndTick{
-
     public final Path configFile = FabricLoader.getInstance().getConfigDir().resolve("frostbyte/maximum-mobility.json");
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     public static float boatStepUp = 1.0F;
@@ -35,7 +37,7 @@ public class BoatChanger implements ClientTickEvents.EndTick{
             if (json.has("boatStepUp"))
                 boatStepUp = json.getAsJsonPrimitive("boatStepUp").getAsFloat();
         } catch (IOException e) {
-            e.printStackTrace();
+            MaximumMobility.LOGGER.error(e.getMessage());
         }
     }
 }

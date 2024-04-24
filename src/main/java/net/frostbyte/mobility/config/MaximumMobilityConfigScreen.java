@@ -59,21 +59,21 @@ public class MaximumMobilityConfigScreen extends Screen {
         final TextFieldWidget stepUpField =
                 new TextFieldWidget(textRenderer, this.width / 2 - 130, this.height / 4 - 24, 60, 20, Text.of("Step Up Height"));
         stepUpField.setText(String.valueOf(stepUp).replace("F", ""));
-        stepUpField.setTooltip(Tooltip.of(Text.of("Set the step up height in blocks\n(To disable, set to 0.6)")));
+        stepUpField.setTooltip(Tooltip.of(Text.of("Set the step up height in blocks\nAllowed Range: 0.0 to 10.0\nVanilla: 0.6)")));
         stepUpField.setPlaceholder(Text.of("0.6"));
         this.addDrawableChild(stepUpField);
 
         final TextFieldWidget boatStepUpField =
                 new TextFieldWidget(textRenderer, this.width / 2 - 130, this.height / 4, 60, 20, Text.of("Boat Step Up Height"));
         boatStepUpField.setText(String.valueOf(boatStepUp).replace("F", ""));
-        boatStepUpField.setTooltip(Tooltip.of(Text.of("Set the boat step up height in blocks\n(To disable, set to 0)")));
+        boatStepUpField.setTooltip(Tooltip.of(Text.of("Set the boat step up height in blocks\nAllowed Range: 0.0 to 32.0\nVanilla: 0.0")));
         boatStepUpField.setPlaceholder(Text.of("0.0"));
         this.addDrawableChild(boatStepUpField);
 
         final TextFieldWidget coyoteTimeField =
                 new TextFieldWidget(textRenderer, this.width / 2 - 130, this.height / 4 + 24, 60, 20, Text.of("Coyote Time"));
         coyoteTimeField.setText(String.valueOf(coyoteTime));
-        coyoteTimeField.setTooltip(Tooltip.of(Text.of("Set coyote time in ticks\n(To disable, set to 0)")));
+        coyoteTimeField.setTooltip(Tooltip.of(Text.of("Set coyote time in ticks\nAllowed Range: 0 to 2147483647\nVanilla: 0")));
         coyoteTimeField.setPlaceholder(Text.of("0"));
         this.addDrawableChild(coyoteTimeField);
 
@@ -127,11 +127,10 @@ public class MaximumMobilityConfigScreen extends Screen {
 
     @Override
     public void render(final DrawContext context, final int mouseX, final int mouseY, final float delta) {
-        this.renderBackground(context, mouseX, mouseY, delta);
+        super.render(context, mouseX, mouseY, delta);
         context.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 20, Colors.WHITE);
         context.drawText(this.textRenderer, "Step Up Height", this.width / 2 - 60, this.height / 4 - 18, Colors.WHITE, true);
         context.drawText(this.textRenderer, "Boat Step Up Height", this.width / 2 - 60, this.height / 4 + 6, Colors.WHITE, true);
         context.drawText(this.textRenderer, "Coyote Time", this.width / 2 - 60, this.height / 4 + 30, Colors.WHITE, true);
-        super.render(context, mouseX, mouseY, delta);
     }
 }

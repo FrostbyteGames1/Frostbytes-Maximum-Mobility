@@ -10,7 +10,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class MaximumMobilityConfig {
-
     public final Path configDir = FabricLoader.getInstance().getConfigDir().resolve("frostbyte");
     public final Path configFile = FabricLoader.getInstance().getConfigDir().resolve("frostbyte/maximum-mobility.json");
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
