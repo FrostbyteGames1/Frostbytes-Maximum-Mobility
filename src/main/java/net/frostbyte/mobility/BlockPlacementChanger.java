@@ -1,47 +1,30 @@
 package net.frostbyte.mobility;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.brigadier.Message;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
-import net.fabricmc.loader.api.FabricLoader;
+import net.frostbyte.mobility.config.MaximumMobilityConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.client.render.BufferBuilder;
-import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.registry.Registry;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.WorldView;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.Objects;
 
 @Environment(EnvType.CLIENT)
 public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudRenderCallback {
-    public final Path configFile = FabricLoader.getInstance().getConfigDir().resolve("frostbyte/maximum-mobility.json");
-    private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    private boolean reachAround = true;
-    public static boolean canPlace = false;
     private MinecraftClient client;
+    private boolean canPlace;
     @Override
     public void onEndTick(MinecraftClient client) {
         this.client = client;
@@ -49,20 +32,8 @@ public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudRende
             return;
         }
 
-        try {
-            if (Files.notExists(configFile)) {
-                return;
-            }
-            JsonObject json = gson.fromJson(Files.readString(configFile), JsonObject.class);
-            if (json.has("reachAround")) {
-                reachAround = json.getAsJsonPrimitive("reachAround").getAsBoolean();
-            }
-        } catch (IOException e) {
-            MaximumMobility.LOGGER.error(e.getMessage());
-        }
-
         assert client.interactionManager != null;
-        if (reachAround) {
+        if (MaximumMobilityConfig.reachAround) {
             canPlace = client.player.getInventory().getMainHandStack().getItem() instanceof BlockItem
                     && !client.player.getInventory().getMainHandStack().isIn(ItemTags.VILLAGER_PLANTABLE_SEEDS)
                     && client.player.supportingBlockPos.isPresent()

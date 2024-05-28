@@ -15,7 +15,7 @@ prioritizeChunkUpdates:0
 fullscreen:false
 gamma:0.5
 graphicsMode:1
-guiScale:2
+guiScale:7
 maxFps:260
 mipmapLevels:4
 narrator:0
@@ -48,8 +48,8 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:[]
-incompatibleResourcePacks:[]
+resourcePacks:["vanilla","fabric","file/FrostbyteGames.zip"]
+incompatibleResourcePacks:["yet_another_config_lib_v3"]
 lastServer:
 lang:en_us
 chatVisibility:0
