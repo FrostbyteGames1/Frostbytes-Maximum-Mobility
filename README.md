@@ -8,7 +8,7 @@
 
 **Overview:**
 
-This mod adds four new behaviors to Minecraft's player movement system, all of which can be customized independently using configs.
+This mod adds new behaviors to Minecraft's player movement system, all of which can be customized independently using configs.
 
 - Step Up: A less annoying version of auto jump that allows the player to climb up blocks without jumping.
 - Coyote Time: Allows the player to jump up even after falling off of a block, making longer jumps slightly more forgiving.
