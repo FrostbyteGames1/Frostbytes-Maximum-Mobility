@@ -20,6 +20,9 @@ public class MaximumMobility implements ModInitializer {
         BlockPlacementChanger blockPlacementChanger = new BlockPlacementChanger();
         ClientTickEvents.END_CLIENT_TICK.register(blockPlacementChanger);
         HudRenderCallback.EVENT.register(blockPlacementChanger);
+
+        ElytraCancel elytraCancel = new ElytraCancel();
+        ClientTickEvents.END_CLIENT_TICK.register(elytraCancel);
     }
 
 }

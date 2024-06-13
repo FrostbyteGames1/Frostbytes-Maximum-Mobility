@@ -10,6 +10,7 @@ import net.frostbyte.mobility.config.MaximumMobilityConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
@@ -68,12 +69,12 @@ public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudRende
     }
 
     @Override
-    public void onHudRender(DrawContext drawContext, float tickDelta) {
+    public void onHudRender(DrawContext drawContext, RenderTickCounter tickCounter) {
         if (canPlace && !this.client.options.hudHidden && this.client.options.getPerspective().isFirstPerson()) {
             drawContext.getMatrices().push();
             RenderSystem.blendFuncSeparate(GlStateManager.SrcFactor.ONE_MINUS_DST_COLOR, GlStateManager.DstFactor.ONE_MINUS_SRC_COLOR, GlStateManager.SrcFactor.ONE, GlStateManager.DstFactor.ZERO);
             RenderSystem.enableBlend();
-            drawContext.drawGuiTexture(new Identifier(MaximumMobility.MOD_ID, "hud/reacharound_indicator"), (drawContext.getScaledWindowWidth() - 15) / 2, (drawContext.getScaledWindowHeight() - 15) / 2, 15, 15);
+            drawContext.drawGuiTexture(Identifier.of(MaximumMobility.MOD_ID, "hud/reacharound_indicator"), (drawContext.getScaledWindowWidth() - 15) / 2, (drawContext.getScaledWindowHeight() - 15) / 2, 15, 15);
             drawContext.getMatrices().pop();
         }
     }

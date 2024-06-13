@@ -1,153 +1,304 @@
-[17:50:13] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.6 with Fabric Loader 0.15.10
-[17:50:13] [main/INFO] (FabricLoader) Loading 58 mods:
-	- fabric-api 0.97.8+1.20.6
-	- fabric-api-base 0.4.40+80f8cf51ff
-	- fabric-api-lookup-api-v1 1.6.59+e9d2a72bff
-	- fabric-biome-api-v1 13.0.25+be5d88beff
-	- fabric-block-api-v1 1.0.20+6dfe4c9bff
-	- fabric-block-view-api-v2 1.0.8+80f8cf51ff
-	- fabric-blockrenderlayer-v1 1.1.50+80f8cf51ff
-	- fabric-client-tags-api-v1 1.1.12+7f945d5bff
-	- fabric-command-api-v1 1.2.45+f71b366fff
-	- fabric-command-api-v2 2.2.24+80f8cf51ff
-	- fabric-commands-v0 0.2.62+df3654b3ff
-	- fabric-content-registries-v0 8.0.4+b82b2392ff
-	- fabric-convention-tags-v1 2.0.3+7f945d5bff
-	- fabric-convention-tags-v2 2.0.0+2b43c5c8ff
-	- fabric-crash-report-info-v1 0.2.27+80f8cf51ff
-	- fabric-data-attachment-api-v1 1.1.15+2a2c66b6ff
-	- fabric-data-generation-api-v1 19.0.6+7f945d5bff
-	- fabric-dimensions-v1 2.1.68+94793913ff
-	- fabric-entity-events-v1 1.6.8+e9d2a72bff
-	- fabric-events-interaction-v0 0.7.6+c5fc38b3ff
-	- fabric-game-rule-api-v1 1.0.50+80f8cf51ff
-	- fabric-gametest-api-v1 1.3.16+1172e897ff
-	- fabric-item-api-v1 8.1.1+17e985d6ff
-	- fabric-item-group-api-v1 4.0.38+aae0949aff
-	- fabric-key-binding-api-v1 1.0.45+80f8cf51ff
-	- fabric-keybindings-v0 0.2.43+df3654b3ff
+[14:27:41] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21 with Fabric Loader 0.15.11
+[14:27:42] [main/INFO] (FabricLoader) Loading 65 mods:
+	- fabric-api 0.100.1+1.21
+	- fabric-api-base 0.4.42+6573ed8c90
+	- fabric-api-lookup-api-v1 1.6.65+b559734490
+	- fabric-biome-api-v1 13.0.28+6fc22b9990
+	- fabric-block-api-v1 1.0.22+0af3f5a790
+	- fabric-block-view-api-v2 1.0.10+6573ed8c90
+	- fabric-blockrenderlayer-v1 1.1.52+0af3f5a790
+	- fabric-client-tags-api-v1 1.1.15+6573ed8c90
+	- fabric-command-api-v1 1.2.48+f71b366f90
+	- fabric-command-api-v2 2.2.27+6a6dfa1990
+	- fabric-commands-v0 0.2.65+df3654b390
+	- fabric-content-registries-v0 8.0.11+b559734490
+	- fabric-convention-tags-v1 2.0.12+7f945d5b90
+	- fabric-convention-tags-v2 2.2.1+d153f34490
+	- fabric-crash-report-info-v1 0.2.29+0af3f5a790
+	- fabric-data-attachment-api-v1 1.1.22+6a6dfa1990
+	- fabric-data-generation-api-v1 20.2.6+16c4ae2590
+	- fabric-dimensions-v1 4.0.0+6fc22b9990
+	- fabric-entity-events-v1 1.6.12+6fc22b9990
+	- fabric-events-interaction-v0 0.7.10+e633f88390
+	- fabric-game-rule-api-v1 1.0.52+6573ed8c90
+	- fabric-gametest-api-v1 2.0.0+6fc22b9990
+	- fabric-item-api-v1 11.0.0+afdfc92190
+	- fabric-item-group-api-v1 4.1.0+00ab0a6390
+	- fabric-key-binding-api-v1 1.0.47+0af3f5a790
+	- fabric-keybindings-v0 0.2.45+df3654b390
 	- fabric-language-kotlin 1.10.19+kotlin.1.9.23
-	- fabric-lifecycle-events-v1 2.3.4+c5fc38b3ff
-	- fabric-loot-api-v2 3.0.4+97f703daff
-	- fabric-message-api-v1 6.0.10+109a837cff
-	- fabric-model-loading-api-v1 1.0.12+80f8cf51ff
-	- fabric-models-v0 0.4.11+9386d8a7ff
-	- fabric-networking-api-v1 4.0.8+0dca0349ff
-	- fabric-object-builder-api-v1 15.1.3+c5fc38b3ff
-	- fabric-particles-v1 4.0.0+c5fc38b3ff
-	- fabric-recipe-api-v1 5.0.3+c5fc38b3ff
-	- fabric-registry-sync-v0 5.0.15+f1240ba7ff
-	- fabric-renderer-api-v1 3.2.12+97f703daff
-	- fabric-renderer-indigo 1.5.12+80f8cf51ff
-	- fabric-renderer-registries-v1 3.2.61+df3654b3ff
-	- fabric-rendering-data-attachment-v1 0.3.46+73761d2eff
-	- fabric-rendering-fluids-v1 3.1.3+2c869dedff
-	- fabric-rendering-v0 1.1.64+df3654b3ff
-	- fabric-rendering-v1 4.2.4+b21c00cbff
-	- fabric-resource-conditions-api-v1 4.0.1+74e2f560ff
-	- fabric-resource-loader-v0 1.0.5+c5f2432cff
-	- fabric-screen-api-v1 2.0.21+7b70ea8aff
-	- fabric-screen-handler-api-v1 1.3.72+b21c00cbff
-	- fabric-sound-api-v1 1.0.21+c5fc38b3ff
-	- fabric-transfer-api-v1 5.1.6+c5fc38b3ff
-	- fabric-transitive-access-wideners-v1 6.0.10+74e2f560ff
-	- fabricloader 0.15.10
+	- fabric-lifecycle-events-v1 2.3.9+98a7dbbb90
+	- fabric-loot-api-v2 3.0.9+6573ed8c90
+	- fabric-message-api-v1 6.0.13+6573ed8c90
+	- fabric-model-loading-api-v1 2.0.0+fe474d6b90
+	- fabric-networking-api-v1 4.1.0+686dcdce90
+	- fabric-object-builder-api-v1 15.1.10+d132107690
+	- fabric-particles-v1 4.0.2+6573ed8c90
+	- fabric-recipe-api-v1 5.0.8+6573ed8c90
+	- fabric-registry-sync-v0 5.0.21+b9828ba390
+	- fabric-renderer-api-v1 3.2.16+fe474d6b90
+	- fabric-renderer-indigo 1.6.3+cc9f121a90
+	- fabric-renderer-registries-v1 3.2.66+df3654b390
+	- fabric-rendering-data-attachment-v1 0.3.48+73761d2e90
+	- fabric-rendering-fluids-v1 3.1.6+b559734490
+	- fabric-rendering-v0 1.1.69+df3654b390
+	- fabric-rendering-v1 5.0.3+d132107690
+	- fabric-resource-conditions-api-v1 4.2.1+d153f34490
+	- fabric-resource-loader-v0 1.1.3+b559734490
+	- fabric-screen-api-v1 2.0.24+b559734490
+	- fabric-screen-handler-api-v1 1.3.78+b559734490
+	- fabric-sound-api-v1 1.0.23+6573ed8c90
+	- fabric-transfer-api-v1 5.1.12+b559734490
+	- fabric-transitive-access-wideners-v1 6.0.12+6573ed8c90
+	- fabricloader 0.15.11
 	- java 21
-	- minecraft 1.20.6
+	- minecraft 1.21
 	- mixinextras 0.3.5
-	- mobility 1.7.0
-	- modmenu 10.0.0-beta.1
-	- yet_another_config_lib_v3 3.4.2+1.20.5-fabric
-[17:50:17] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/C:/Users/surap/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.13.3+mixin.0.8.5/9527e6b0d2449408958fd1302594dc65ec5ade9c/sponge-mixin-0.13.3+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
-[17:50:17] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[17:50:17] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[17:50:19] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
-[17:50:27] [Datafixer Bootstrap/INFO] (Minecraft) 222 Datafixer optimizations took 310 milliseconds
-[17:50:30] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[17:50:30] [Render thread/INFO] (Minecraft) Setting user: Player169
-[17:50:31] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[17:50:31] [Render thread/INFO] (YetAnotherConfigLib) Deserializing YACLConfig from 'C:\Users\surap\IdeaProjects\Frostbytes-Maximum-Mobility\run\config\yacl.json5'
-[17:50:32] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.3-snapshot
-[17:50:34] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-models-v0, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, mobility, modmenu, yet_another_config_lib_v3, file/FrostbyteGames.zip
-[17:50:34] [Worker-Main-8/INFO] (Minecraft) Found unifont_all_no_pua-15.1.04.hex, loading
-[17:50:34] [Worker-Main-2/INFO] (Minecraft) Found unifont_jp_patch-15.1.04.hex, loading
-[17:50:35] [Render thread/WARN] (Minecraft) Skipped language file: minecraft:lang/en_us.json (com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Unterminated object at line 81 column 39 path $.container.slabsandstairs.sawmill)
-[17:50:35] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
-[17:50:35] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[17:50:36] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on Headphones (Srithan’s AirPods Pro)
-[17:50:36] [Render thread/INFO] (Minecraft) Sound engine started
-[17:50:36] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[17:50:37] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[17:50:37] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[17:50:37] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[17:50:37] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[17:50:38] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[17:50:38] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[17:50:38] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[17:50:38] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[17:50:38] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[17:50:38] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[17:50:38] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[17:50:38] [Render thread/INFO] (Minecraft) Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[17:50:38] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[17:50:38] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[17:50:46] [Render thread/INFO] (YetAnotherConfigLib) Generating YACL screen
-[17:50:47] [Render thread/INFO] (YetAnotherConfigLib) Generating YACL screen
-[17:51:10] [Render thread/INFO] (Minecraft) Loaded 1175 recipes
-[17:51:11] [Render thread/INFO] (Minecraft) Loaded 1276 advancements
-[17:51:11] [Render thread/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 64 new biomes in 3.003 ms
-[17:51:11] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.20.6
-[17:51:11] [Server thread/INFO] (Minecraft) Generating keypair
-[17:51:13] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
-[17:51:14] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[17:51:14] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[17:51:14] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[17:51:14] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[17:51:15] [Render thread/INFO] (Minecraft) Preparing spawn area: 18%
-[17:51:15] [Render thread/INFO] (Minecraft) Time elapsed: 2154 ms
-[17:51:15] [Server thread/INFO] (Minecraft) Changing view distance to 12, from 10
-[17:51:15] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
-[17:51:17] [Server thread/INFO] (Minecraft) Player169[local:E:9a3eedb4] logged in with entity id 11 at (-80.55126543542899, 69.0, -75.19833464597426)
-[17:51:17] [Server thread/INFO] (Minecraft) Player169 joined the game
-[17:51:17] [Render thread/INFO] (Minecraft) Loaded 15 advancements
-[17:51:17] [Render thread/INFO] (Minecraft) Loaded 24 advancements
-[17:52:21] [Server thread/INFO] (Minecraft) [Player169: Successfully filled 72 block(s)]
-[17:52:21] [Render thread/INFO] (Minecraft) [System] [CHAT] Successfully filled 72 block(s)
-[17:52:28] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[17:52:28] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
-[17:52:28] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
-[17:52:28] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
-[17:52:29] [Render thread/INFO] (YetAnotherConfigLib) Generating YACL screen
-[17:52:30] [Render thread/INFO] (YetAnotherConfigLib) Generating YACL screen
-[17:52:44] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[17:52:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
-[17:52:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
-[17:52:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
-[17:52:55] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[17:52:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
-[17:52:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
-[17:52:55] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
-[17:52:58] [Render thread/INFO] (YetAnotherConfigLib) Generating YACL screen
-[17:52:59] [Render thread/INFO] (YetAnotherConfigLib) Generating YACL screen
-[17:53:08] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[17:53:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
-[17:53:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
-[17:53:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
-[17:53:28] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[17:53:28] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
-[17:53:28] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
-[17:53:28] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
-[17:53:29] [Server thread/INFO] (Minecraft) Player169 lost connection: Disconnected
-[17:53:29] [Server thread/INFO] (Minecraft) Player169 left the game
-[17:53:29] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
-[17:53:29] [Server thread/INFO] (Minecraft) Stopping server
-[17:53:29] [Server thread/INFO] (Minecraft) Saving players
-[17:53:29] [Server thread/INFO] (Minecraft) Saving worlds
-[17:53:29] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
-[17:53:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
-[17:53:30] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
-[17:53:30] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (Test): All chunks are saved
-[17:53:30] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[17:53:30] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[17:53:30] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
-[17:53:31] [Render thread/INFO] (Minecraft) Stopping!
+	- mobility 1.8.0
+	- modmenu 11.0.0-beta.1
+	- yet_another_config_lib_v3 3.5.0+1.21-fabric
+	   |-- com_twelvemonkeys_common_common-image 3.10.0
+	   |-- com_twelvemonkeys_common_common-io 3.10.0
+	   |-- com_twelvemonkeys_common_common-lang 3.10.0
+	   |-- com_twelvemonkeys_imageio_imageio-core 3.10.0
+	   |-- com_twelvemonkeys_imageio_imageio-metadata 3.10.0
+	   |-- com_twelvemonkeys_imageio_imageio-webp 3.10.0
+	   |-- org_quiltmc_parsers_gson 0.2.1
+	   \-- org_quiltmc_parsers_json 0.2.1
+[14:27:48] [main/WARN] (FabricLoader/ModRemap) Error deleting temporary input jar true
+java.nio.file.FileSystemException: C:\Users\surap\IdeaProjects\Frostbytes-Maximum-Mobility\run\.fabric\tmp\com_twelvemonkeys_common_common-lang7282599510476016869.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273) ~[?:?]
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109) ~[?:?]
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191) ~[?:?]
+	at net.fabricmc.loader.impl.discovery.RuntimeModRemapper.remap(RuntimeModRemapper.java:194) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.setup(FabricLoaderImpl.java:242) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:192) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:146) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+[14:27:48] [main/WARN] (FabricLoader/ModRemap) Error deleting temporary input jar true
+java.nio.file.FileSystemException: C:\Users\surap\IdeaProjects\Frostbytes-Maximum-Mobility\run\.fabric\tmp\com_twelvemonkeys_imageio_imageio-metadata11180997466746919475.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273) ~[?:?]
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109) ~[?:?]
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191) ~[?:?]
+	at net.fabricmc.loader.impl.discovery.RuntimeModRemapper.remap(RuntimeModRemapper.java:194) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.setup(FabricLoaderImpl.java:242) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:192) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:146) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+[14:27:48] [main/WARN] (FabricLoader/ModRemap) Error deleting temporary input jar true
+java.nio.file.FileSystemException: C:\Users\surap\IdeaProjects\Frostbytes-Maximum-Mobility\run\.fabric\tmp\com_twelvemonkeys_common_common-io2156085871561227237.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273) ~[?:?]
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109) ~[?:?]
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191) ~[?:?]
+	at net.fabricmc.loader.impl.discovery.RuntimeModRemapper.remap(RuntimeModRemapper.java:194) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.setup(FabricLoaderImpl.java:242) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:192) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:146) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+[14:27:48] [main/WARN] (FabricLoader/ModRemap) Error deleting temporary input jar true
+java.nio.file.FileSystemException: C:\Users\surap\IdeaProjects\Frostbytes-Maximum-Mobility\run\.fabric\tmp\org_quiltmc_parsers_json5553566809475139013.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273) ~[?:?]
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109) ~[?:?]
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191) ~[?:?]
+	at net.fabricmc.loader.impl.discovery.RuntimeModRemapper.remap(RuntimeModRemapper.java:194) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.setup(FabricLoaderImpl.java:242) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:192) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:146) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+[14:27:48] [main/WARN] (FabricLoader/ModRemap) Error deleting temporary input jar true
+java.nio.file.FileSystemException: C:\Users\surap\IdeaProjects\Frostbytes-Maximum-Mobility\run\.fabric\tmp\com_twelvemonkeys_common_common-image13015467933009444488.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273) ~[?:?]
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109) ~[?:?]
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191) ~[?:?]
+	at net.fabricmc.loader.impl.discovery.RuntimeModRemapper.remap(RuntimeModRemapper.java:194) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.setup(FabricLoaderImpl.java:242) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:192) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:146) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+[14:27:48] [main/WARN] (FabricLoader/ModRemap) Error deleting temporary input jar true
+java.nio.file.FileSystemException: C:\Users\surap\IdeaProjects\Frostbytes-Maximum-Mobility\run\.fabric\tmp\com_twelvemonkeys_imageio_imageio-core13186390140271923398.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273) ~[?:?]
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109) ~[?:?]
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191) ~[?:?]
+	at net.fabricmc.loader.impl.discovery.RuntimeModRemapper.remap(RuntimeModRemapper.java:194) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.setup(FabricLoaderImpl.java:242) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:192) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:146) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+[14:27:48] [main/WARN] (FabricLoader/ModRemap) Error deleting temporary input jar true
+java.nio.file.FileSystemException: C:\Users\surap\IdeaProjects\Frostbytes-Maximum-Mobility\run\.fabric\tmp\com_twelvemonkeys_imageio_imageio-webp10704421877189947279.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273) ~[?:?]
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109) ~[?:?]
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191) ~[?:?]
+	at net.fabricmc.loader.impl.discovery.RuntimeModRemapper.remap(RuntimeModRemapper.java:194) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.setup(FabricLoaderImpl.java:242) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:192) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:146) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+[14:27:48] [main/WARN] (FabricLoader/ModRemap) Error deleting temporary input jar true
+java.nio.file.FileSystemException: C:\Users\surap\IdeaProjects\Frostbytes-Maximum-Mobility\run\.fabric\tmp\org_quiltmc_parsers_gson14090037990190895268.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273) ~[?:?]
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109) ~[?:?]
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191) ~[?:?]
+	at net.fabricmc.loader.impl.discovery.RuntimeModRemapper.remap(RuntimeModRemapper.java:194) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.setup(FabricLoaderImpl.java:242) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:192) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:146) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+[14:27:48] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/C:/Users/surap/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.13.3+mixin.0.8.5/9527e6b0d2449408958fd1302594dc65ec5ade9c/sponge-mixin-0.13.3+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[14:27:48] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[14:27:48] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[14:27:51] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
+[14:27:54] [Datafixer Bootstrap/INFO] (Minecraft) 226 Datafixer optimizations took 726 milliseconds
+[14:28:06] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[14:28:06] [Render thread/INFO] (Minecraft) Setting user: Player330
+[14:28:07] [Render thread/INFO] (YetAnotherConfigLib) Deserializing YACLConfig from 'C:\Users\surap\IdeaProjects\Frostbytes-Maximum-Mobility\run\config\yacl.json5'
+[14:28:07] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[14:28:08] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.3-snapshot
+[14:28:09] [Render thread/WARN] (Minecraft) Removed resource pack file/FrostbyteGames.zip from options because it is no longer compatible
+[14:28:10] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, mobility, modmenu, yet_another_config_lib_v3
+[14:28:11] [Worker-Main-12/INFO] (Minecraft) Found unifont_all_no_pua-15.1.05.hex, loading
+[14:28:11] [Worker-Main-1/INFO] (Minecraft) Found unifont_jp_patch-15.1.05.hex, loading
+[14:28:14] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[14:28:14] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[14:28:14] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on Headphones (Srithan’s AirPods Pro)
+[14:28:14] [Render thread/INFO] (Minecraft) Sound engine started
+[14:28:14] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[14:28:14] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[14:28:14] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[14:28:14] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[14:28:14] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[14:28:14] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[14:28:14] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[14:28:14] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[14:28:14] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[14:28:15] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[14:28:15] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[14:28:15] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[14:28:15] [Render thread/INFO] (Minecraft) Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[14:28:15] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[14:28:15] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[14:28:21] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, mobility, modmenu, yet_another_config_lib_v3
+[14:28:21] [Worker-Main-6/INFO] (Minecraft) Found unifont_all_no_pua-15.1.05.hex, loading
+[14:28:21] [Worker-Main-9/INFO] (Minecraft) Found unifont_jp_patch-15.1.05.hex, loading
+[14:28:23] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[14:28:23] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[14:28:23] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on Headphones (Srithan’s AirPods Pro)
+[14:28:23] [Render thread/INFO] (Minecraft) Sound engine started
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[14:28:23] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[14:28:23] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[14:28:33] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, mobility, modmenu, yet_another_config_lib_v3, file/FrostbyteGames.zip
+[14:28:33] [Worker-Main-2/INFO] (Minecraft) Found unifont_all_no_pua-15.1.05.hex, loading
+[14:28:34] [Worker-Main-11/INFO] (Minecraft) Found unifont_jp_patch-15.1.05.hex, loading
+[14:28:35] [Render thread/WARN] (Minecraft) Skipped language file: minecraft:lang/en_us.json (com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Unterminated object at line 81 column 39 path $.container.slabsandstairs.sawmill)
+[14:28:35] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[14:28:35] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[14:28:35] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on Headphones (Srithan’s AirPods Pro)
+[14:28:35] [Render thread/INFO] (Minecraft) Sound engine started
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[14:28:35] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[14:28:35] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[14:28:41] [Render thread/INFO] (Minecraft) Loaded 1290 recipes
+[14:28:41] [Render thread/INFO] (Minecraft) Loaded 1399 advancements
+[14:28:42] [Render thread/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 64 new biomes in 3.508 ms
+[14:28:42] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.21
+[14:28:42] [Server thread/INFO] (Minecraft) Generating keypair
+[14:28:44] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[14:28:45] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[14:28:45] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[14:28:45] [Render thread/INFO] (Minecraft) Time elapsed: 1192 ms
+[14:28:45] [Server thread/INFO] (Minecraft) Changing view distance to 12, from 10
+[14:28:45] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[14:28:48] [Server thread/INFO] (Minecraft) Player330[local:E:0c12b803] logged in with entity id 13 at (-69.70810742291826, 70.0, -74.15085430109843)
+[14:28:48] [Server thread/INFO] (Minecraft) Player330 joined the game
+[14:28:48] [Server thread/INFO] (Minecraft) Player330 has reached the goal [Sky's the Limit]
+[14:28:48] [Render thread/INFO] (Minecraft) [System] [CHAT] Player330 has reached the goal [Sky's the Limit]
+[14:28:49] [Render thread/INFO] (Minecraft) Loaded 21 advancements
+[14:29:11] [Render thread/INFO] (Minecraft) Loaded 30 advancements
+[14:30:05] [Server thread/WARN] (Minecraft) Rejecting UseItemOnPacket from Player330: Location (-74.96993428468704, 71.0, -73.35272061824799) too far away from hit block BlockPos{x=-74, y=70, z=-74}.
+[14:30:05] [Server thread/WARN] (Minecraft) Rejecting UseItemOnPacket from Player330: Location (-74.96993428468704, 71.0, -73.35272061824799) too far away from hit block BlockPos{x=-74, y=70, z=-74}.
+[14:30:10] [Server thread/WARN] (Minecraft) Rejecting UseItemOnPacket from Player330: Location (-74.79140704870224, 71.0, -73.05726474523544) too far away from hit block BlockPos{x=-74, y=70, z=-74}.
+[14:30:10] [Server thread/WARN] (Minecraft) Rejecting UseItemOnPacket from Player330: Location (-74.79140704870224, 71.0, -73.05726474523544) too far away from hit block BlockPos{x=-74, y=70, z=-74}.
+[14:30:17] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[14:30:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
+[14:30:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
+[14:30:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
+[14:30:18] [Server thread/INFO] (Minecraft) Player330 lost connection: Disconnected
+[14:30:18] [Server thread/INFO] (Minecraft) Player330 left the game
+[14:30:18] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[14:30:18] [Server thread/INFO] (Minecraft) Stopping server
+[14:30:18] [Server thread/INFO] (Minecraft) Saving players
+[14:30:18] [Server thread/INFO] (Minecraft) Saving worlds
+[14:30:18] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
+[14:30:18] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
+[14:30:18] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
+[14:30:18] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (Test): All chunks are saved
+[14:30:18] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14:30:18] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[14:30:18] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
+[14:30:20] [Render thread/INFO] (Minecraft) Stopping!

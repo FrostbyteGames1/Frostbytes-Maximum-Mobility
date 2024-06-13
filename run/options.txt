@@ -1,4 +1,4 @@
-version:3839
+version:3953
 ao:true
 biomeBlendRadius:2
 enableVsync:false
@@ -15,7 +15,7 @@ prioritizeChunkUpdates:0
 fullscreen:false
 gamma:0.5
 graphicsMode:1
-guiScale:7
+guiScale:3
 maxFps:260
 mipmapLevels:4
 narrator:0
@@ -49,7 +49,7 @@ damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
 resourcePacks:["vanilla","fabric","file/FrostbyteGames.zip"]
-incompatibleResourcePacks:["yet_another_config_lib_v3"]
+incompatibleResourcePacks:["yet_another_config_lib_v3","file/FrostbyteGames.zip"]
 lastServer:
 lang:en_us
 chatVisibility:0
@@ -86,7 +86,7 @@ onlyShowSecureChat:false
 panoramaScrollSpeed:1.0
 telemetryOptInExtra:false
 onboardAccessibility:false
-menuBackgroundBlurriness:0.5
+menuBackgroundBlurriness:5
 key_key.attack:key.mouse.left
 key_key.use:key.mouse.right
 key_key.forward:key.keyboard.w

@@ -25,6 +25,7 @@ public class MaximumMobilityConfig {
     public static double stepUp = 0.6;
     public static double boatStepUp = 0.0;
     public static int coyoteTime = 0;
+    public static boolean elytraCancel = false;
     public static boolean reachAround = false;
 
     public static Screen createScreen(Screen parent) {
@@ -52,6 +53,12 @@ public class MaximumMobilityConfig {
                     .description(OptionDescription.of(Text.of("The number of ticks after falling off of a block that the player can still jump")))
                     .binding(0, () -> coyoteTime, newVal -> coyoteTime = newVal)
                     .controller(option -> integerSliderController(option, 0, 100, 1))
+                    .build())
+                .option(Option.<Boolean>createBuilder()
+                    .name(Text.of("Elytra Cancel"))
+                    .description(OptionDescription.of(Text.of("The ability to stop using the elytra if the jump key is pressed, like is possible in Bedrock Edition")))
+                    .binding(false, () -> elytraCancel, newVal -> elytraCancel = newVal)
+                    .controller(TickBoxControllerBuilder::create)
                     .build())
                 .option(Option.<Boolean>createBuilder()
                     .name(Text.of("Reach Around Block Placement"))
@@ -84,6 +91,7 @@ public class MaximumMobilityConfig {
             json.addProperty("stepUp", stepUp);
             json.addProperty("boatStepUp", boatStepUp);
             json.addProperty("coyoteTime", coyoteTime);
+            json.addProperty("elytraCancel", elytraCancel);
             json.addProperty("reachAround", reachAround);
             Files.writeString(configFile, gson.toJson(json));
         } catch (IOException ignored) {
@@ -105,6 +113,9 @@ public class MaximumMobilityConfig {
             }
             if (json.has("coyoteTime")) {
                 coyoteTime = json.getAsJsonPrimitive("coyoteTime").getAsInt();
+            }
+            if (json.has("elytraCancel")) {
+                elytraCancel = json.getAsJsonPrimitive("elytraCancel").getAsBoolean();
             }
             if (json.has("reachAround")) {
                 reachAround = json.getAsJsonPrimitive("reachAround").getAsBoolean();
