@@ -16,9 +16,7 @@ This mod adds new behaviors to Minecraft's player movement system, all of which 
 - Reach Around Block Placement: Implements the Bedrock Edition ability to place blocks in front of the player.
 - Elytra Canceling: Implements the Bedrock Edition ability to tap the jump key while flying with the elytra in order to stop.
 
-**Notes:**
-
-- I am not currently planning on adding more content to this mod. However, feel free to suggest new behaviors through GitHub's feature request system, and I may consider adding them.
+If using this mod on a server, some behaviors may require [Frostbyte's Skip Server Movement Check](https://github.com/FrostbyteGames1/Frostbytes-Skip-Server-Movement-Check) to be installed on the server in order to work as intended.
 
 **FAQs:**
 
@@ -31,3 +29,5 @@ This mod adds new behaviors to Minecraft's player movement system, all of which 
 Modrinth - https://modrinth.com/mod/frostbytes-maximum-mobility
 
 Curseforge - https://www.curseforge.com/minecraft/mc-mods/frostbytes-maximum-mobility
+
+[![BisectHosting](https://www.bisecthosting.com/partners/custom-banners/92987bf2-5957-4acb-8dd9-0fadd0fdd7e4.webp)](https://www.bisecthosting.com/frostbyte)
