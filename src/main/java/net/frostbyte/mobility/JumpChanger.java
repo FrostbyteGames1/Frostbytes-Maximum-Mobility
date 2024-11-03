@@ -30,7 +30,7 @@ public class JumpChanger implements ClientTickEvents.EndTick {
             if (!player.isOnGround()) {
                 yValues[1] = player.getY();
                 fallingTicks ++;
-                if (fallingTicks < MaximumMobilityConfig.coyoteTime && player.input.jumping && yValues[1] < yValues[0]) {
+                if (fallingTicks < MaximumMobilityConfig.coyoteTime && player.jumping && yValues[1] < yValues[0]) {
                     player.jump();
                     fallingTicks = MaximumMobilityConfig.coyoteTime;
                 }

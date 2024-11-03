@@ -20,9 +20,9 @@ public final class StepChanger implements ClientTickEvents.EndTick {
         }
 
         if (player.isSneaking()) {
-            Objects.requireNonNull(player.getAttributes().getCustomInstance(EntityAttributes.GENERIC_STEP_HEIGHT)).setBaseValue(0.6);
+            Objects.requireNonNull(player.getAttributes().getCustomInstance(EntityAttributes.STEP_HEIGHT)).setBaseValue(0.6);
         } else {
-            Objects.requireNonNull(player.getAttributes().getCustomInstance(EntityAttributes.GENERIC_STEP_HEIGHT)).setBaseValue(MaximumMobilityConfig.stepUp);
+            Objects.requireNonNull(player.getAttributes().getCustomInstance(EntityAttributes.STEP_HEIGHT)).setBaseValue(MaximumMobilityConfig.stepUp);
         }
     }
 }

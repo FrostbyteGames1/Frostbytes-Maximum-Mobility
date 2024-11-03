@@ -10,6 +10,7 @@ import net.frostbyte.mobility.config.MaximumMobilityConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.tag.BlockTags;
@@ -74,7 +75,7 @@ public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudRende
             drawContext.getMatrices().push();
             RenderSystem.blendFuncSeparate(GlStateManager.SrcFactor.ONE_MINUS_DST_COLOR, GlStateManager.DstFactor.ONE_MINUS_SRC_COLOR, GlStateManager.SrcFactor.ONE, GlStateManager.DstFactor.ZERO);
             RenderSystem.enableBlend();
-            drawContext.drawGuiTexture(Identifier.of(MaximumMobility.MOD_ID, "hud/reacharound_indicator"), (drawContext.getScaledWindowWidth() - 15) / 2, (drawContext.getScaledWindowHeight() - 15) / 2, 15, 15);
+            drawContext.drawGuiTexture(RenderLayer::getCrosshair, Identifier.of(MaximumMobility.MOD_ID, "hud/reacharound_indicator"), (drawContext.getScaledWindowWidth() - 15) / 2, (drawContext.getScaledWindowHeight() - 15) / 2, 15, 15);
             drawContext.getMatrices().pop();
         }
     }

@@ -1,4 +1,4 @@
-version:3953
+version:4082
 ao:true
 biomeBlendRadius:2
 enableVsync:false
@@ -15,8 +15,9 @@ prioritizeChunkUpdates:0
 fullscreen:false
 gamma:0.5
 graphicsMode:1
-guiScale:3
+guiScale:6
 maxFps:260
+inactivityFpsLimit:"afk"
 mipmapLevels:4
 narrator:0
 particles:0
@@ -27,6 +28,7 @@ simulationDistance:12
 screenEffectScale:0.10915492957746478
 soundDevice:""
 autoJump:false
+rotateWithMinecart:false
 operatorItemsTab:false
 autoSuggestions:true
 chatColors:true
@@ -47,9 +49,10 @@ hideSplashTexts:false
 mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
+highContrastBlockOutline:false
 narratorHotkey:true
 resourcePacks:["vanilla","fabric","file/FrostbyteGames.zip"]
-incompatibleResourcePacks:["yet_another_config_lib_v3","file/FrostbyteGames.zip"]
+incompatibleResourcePacks:["yet_another_config_lib_v3"]
 lastServer:
 lang:en_us
 chatVisibility:0
@@ -78,7 +81,6 @@ glDebugVerbosity:1
 skipMultiplayerWarning:false
 hideMatchedNames:true
 joinedFirstServer:false
-hideBundleTutorial:false
 syncChunkWrites:true
 showAutosaveIndicator:true
 allowServerListing:true
