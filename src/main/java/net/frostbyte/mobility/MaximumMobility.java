@@ -7,6 +7,7 @@ import net.frostbyte.mobility.config.MaximumMobilityConfig;
 
 public class MaximumMobility implements ModInitializer {
     public static final String MOD_ID = "mobility";
+    @SuppressWarnings("deprecation")
     @Override
     public void onInitialize() {
         MaximumMobilityConfig.read();

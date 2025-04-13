@@ -1,7 +1,5 @@
 package net.frostbyte.mobility;
 
-import com.mojang.blaze3d.platform.GlStateManager;
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -23,6 +21,7 @@ import net.minecraft.util.math.Direction;
 
 import java.util.Objects;
 
+@SuppressWarnings("deprecation")
 @Environment(EnvType.CLIENT)
 public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudRenderCallback {
     private MinecraftClient client;
@@ -36,8 +35,8 @@ public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudRende
 
         assert client.interactionManager != null;
         if (MaximumMobilityConfig.reachAround) {
-            canPlace = client.player.getInventory().getMainHandStack().getItem() instanceof BlockItem
-                    && !client.player.getInventory().getMainHandStack().isIn(ItemTags.VILLAGER_PLANTABLE_SEEDS)
+            canPlace = client.player.getInventory().getSelectedStack().getItem() instanceof BlockItem
+                    && !client.player.getInventory().getSelectedStack().isIn(ItemTags.VILLAGER_PLANTABLE_SEEDS)
                     && client.player.supportingBlockPos.isPresent()
                     && Objects.requireNonNull(client.crosshairTarget).getType() != HitResult.Type.BLOCK
                     && getTargetPos(client.player) != null && Objects.requireNonNull(client.world).getBlockState(getTargetPos(client.player)).isIn(BlockTags.REPLACEABLE);
@@ -72,11 +71,7 @@ public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudRende
     @Override
     public void onHudRender(DrawContext drawContext, RenderTickCounter tickCounter) {
         if (canPlace && !this.client.options.hudHidden && this.client.options.getPerspective().isFirstPerson()) {
-            drawContext.getMatrices().push();
-            RenderSystem.blendFuncSeparate(GlStateManager.SrcFactor.ONE_MINUS_DST_COLOR, GlStateManager.DstFactor.ONE_MINUS_SRC_COLOR, GlStateManager.SrcFactor.ONE, GlStateManager.DstFactor.ZERO);
-            RenderSystem.enableBlend();
             drawContext.drawGuiTexture(RenderLayer::getCrosshair, Identifier.of(MaximumMobility.MOD_ID, "hud/reacharound_indicator"), (drawContext.getScaledWindowWidth() - 15) / 2, (drawContext.getScaledWindowHeight() - 15) / 2, 15, 15);
-            drawContext.getMatrices().pop();
         }
     }
 }
