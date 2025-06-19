@@ -6,9 +6,9 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.frostbyte.mobility.config.MaximumMobilityConfig;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gl.RenderPipelines;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.tag.BlockTags;
@@ -71,7 +71,7 @@ public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudRende
     @Override
     public void onHudRender(DrawContext drawContext, RenderTickCounter tickCounter) {
         if (canPlace && !this.client.options.hudHidden && this.client.options.getPerspective().isFirstPerson()) {
-            drawContext.drawGuiTexture(RenderLayer::getCrosshair, Identifier.of(MaximumMobility.MOD_ID, "hud/reacharound_indicator"), (drawContext.getScaledWindowWidth() - 15) / 2, (drawContext.getScaledWindowHeight() - 15) / 2, 15, 15);
+            drawContext.drawGuiTexture(RenderPipelines.CROSSHAIR, Identifier.of(MaximumMobility.MOD_ID, "hud/reacharound_indicator"), (drawContext.getScaledWindowWidth() - 15) / 2, (drawContext.getScaledWindowHeight() - 15) / 2, 15, 15);
         }
     }
 }
