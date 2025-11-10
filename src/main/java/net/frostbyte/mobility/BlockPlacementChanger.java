@@ -41,7 +41,7 @@ public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudRende
                     && Objects.requireNonNull(client.crosshairTarget).getType() != HitResult.Type.BLOCK
                     && getTargetPos(client.player) != null && Objects.requireNonNull(client.world).getBlockState(getTargetPos(client.player)).isIn(BlockTags.REPLACEABLE);
             if (client.options.useKey.isPressed() && canPlace) {
-                if (client.interactionManager.interactBlock(client.player, client.player.getActiveHand(), new BlockHitResult(client.player.getPos(), client.player.getHorizontalFacing().getOpposite(), getTargetPos(client.player), false)).isAccepted()) {
+                if (client.interactionManager.interactBlock(client.player, client.player.getActiveHand(), new BlockHitResult(client.player.getEntityPos(), client.player.getHorizontalFacing().getOpposite(), getTargetPos(client.player), false)).isAccepted()) {
                     client.player.swingHand(client.player.getActiveHand());
                 }
             }
