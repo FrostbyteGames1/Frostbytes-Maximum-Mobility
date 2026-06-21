@@ -3,75 +3,77 @@ package net.frostbyte.mobility;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
+import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElement;
 import net.frostbyte.mobility.config.MaximumMobilityConfig;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gl.RenderPipelines;
-import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.client.render.RenderTickCounter;
-import net.minecraft.item.BlockItem;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.HitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
+import net.minecraft.client.DeltaTracker;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.core.BlockPos;
+import net.minecraft.resources.Identifier;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 
 import java.util.Objects;
 
-@SuppressWarnings("deprecation")
 @Environment(EnvType.CLIENT)
-public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudRenderCallback {
-    private MinecraftClient client;
-    private boolean canPlace;
+public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudElement {
+    Minecraft client;
+    boolean canPlace;
+
+    @SuppressWarnings("DataFlowIssue")
     @Override
-    public void onEndTick(MinecraftClient client) {
+    public void onEndTick(Minecraft client) {
         this.client = client;
-        if (client.player == null ) {
+        if (client.player == null) {
             return;
         }
 
-        assert client.interactionManager != null;
         if (MaximumMobilityConfig.reachAround) {
-            canPlace = client.player.getInventory().getSelectedStack().getItem() instanceof BlockItem
-                    && !client.player.getInventory().getSelectedStack().isIn(ItemTags.VILLAGER_PLANTABLE_SEEDS)
-                    && client.player.supportingBlockPos.isPresent()
-                    && Objects.requireNonNull(client.crosshairTarget).getType() != HitResult.Type.BLOCK
-                    && getTargetPos(client.player) != null && Objects.requireNonNull(client.world).getBlockState(getTargetPos(client.player)).isIn(BlockTags.REPLACEABLE);
-            if (client.options.useKey.isPressed() && canPlace) {
-                if (client.interactionManager.interactBlock(client.player, client.player.getActiveHand(), new BlockHitResult(client.player.getEntityPos(), client.player.getHorizontalFacing().getOpposite(), getTargetPos(client.player), false)).isAccepted()) {
-                    client.player.swingHand(client.player.getActiveHand());
+            canPlace = client.player.getInventory().getSelectedItem().getItem() instanceof BlockItem
+                && !client.player.getInventory().getSelectedItem().is(ItemTags.VILLAGER_PLANTABLE_SEEDS)
+                && client.player.mainSupportingBlockPos.isPresent()
+                && Objects.requireNonNull(client.hitResult).getType() != HitResult.Type.BLOCK
+                && getTargetPos(client.player) != null
+                && Objects.requireNonNull(client.level).getBlockState(getTargetPos(client.player)).is(BlockTags.REPLACEABLE);
+            if (canPlace && client.options.keyUse.isDown()) {
+                if (client.gameMode != null && client.gameMode.useItemOn(client.player, client.player.getUsedItemHand(), new BlockHitResult(client.player.position(), client.player.getDirection().getOpposite(), getTargetPos(client.player), false)) instanceof InteractionResult.Success) {
+                    client.player.swing(client.player.getUsedItemHand());
                 }
             }
         }
     }
 
-    private static BlockPos getTargetPos(ClientPlayerEntity player) {
-        BlockPos targetPos = player.supportingBlockPos.orElse(null);
+    private static BlockPos getTargetPos(LocalPlayer player) {
+        BlockPos targetPos = player.mainSupportingBlockPos.orElse(null);
         if (targetPos == null) {
             return null;
         }
-        if (player.getHorizontalFacing() == Direction.NORTH) {
-            targetPos = targetPos.north();
-        }
-        if (player.getHorizontalFacing() == Direction.EAST) {
-            targetPos = targetPos.east();
-        }
-        if (player.getHorizontalFacing() == Direction.SOUTH) {
-            targetPos = targetPos.south();
-        }
-        if (player.getHorizontalFacing() == Direction.WEST) {
-            targetPos = targetPos.west();
-        }
-        return targetPos;
+        return switch (player.getDirection()) {
+            case NORTH -> targetPos.north();
+            case EAST -> targetPos.east();
+            case SOUTH -> targetPos.south();
+            case WEST -> targetPos.west();
+            default -> targetPos;
+        };
     }
 
+    @SuppressWarnings("NullableProblems")
     @Override
-    public void onHudRender(DrawContext drawContext, RenderTickCounter tickCounter) {
-        if (canPlace && !this.client.options.hudHidden && this.client.options.getPerspective().isFirstPerson()) {
-            drawContext.drawGuiTexture(RenderPipelines.CROSSHAIR, Identifier.of(MaximumMobility.MOD_ID, "hud/reacharound_indicator"), (drawContext.getScaledWindowWidth() - 15) / 2, (drawContext.getScaledWindowHeight() - 15) / 2, 15, 15);
+    public void extractRenderState(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker) {
+        if (client != null && client.player != null && MaximumMobilityConfig.reachAround && canPlace) {
+            graphics.blit(
+                RenderPipelines.CROSSHAIR,
+                Identifier.fromNamespaceAndPath(MaximumMobility.MOD_ID, "textures/gui/sprites/hud/reacharound_indicator.png"),
+                (client.getWindow().getGuiScaledWidth() - 15) / 2,
+                (client.getWindow().getGuiScaledHeight() - 15) / 2,
+                0, 0, 15, 15, 15, 15
+            );
         }
     }
 }

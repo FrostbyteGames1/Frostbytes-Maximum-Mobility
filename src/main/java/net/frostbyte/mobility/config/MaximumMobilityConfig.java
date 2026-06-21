@@ -11,8 +11,8 @@ import dev.isxander.yacl3.api.controller.DoubleSliderControllerBuilder;
 import dev.isxander.yacl3.api.controller.IntegerSliderControllerBuilder;
 import dev.isxander.yacl3.api.controller.TickBoxControllerBuilder;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.text.Text;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -31,38 +31,38 @@ public class MaximumMobilityConfig {
     public static Screen createScreen(Screen parent) {
         read();
         return YetAnotherConfigLib.createBuilder()
-            .title(Text.of("Frostbyte's Maximum Mobility Config Menu"))
+            .title(Component.literal("Frostbyte's Maximum Mobility Config Menu"))
 
             .category(ConfigCategory.createBuilder()
-                .name(Text.of("Frostbyte's Maximum Mobility"))
-                .tooltip(Text.of("Configuration menu for Frostbyte's Maximum Mobility"))
+                .name(Component.literal("Frostbyte's Maximum Mobility"))
+                .tooltip(Component.literal("Configuration menu for Frostbyte's Maximum Mobility"))
                 .option(Option.<Double>createBuilder()
-                    .name(Text.of("Player Step Height"))
-                    .description(OptionDescription.of(Text.of("The number of blocks that the player can walk up without jumping")))
+                    .name(Component.literal("Player Step Height"))
+                    .description(OptionDescription.of(Component.literal("The number of blocks that the player can walk up without jumping")))
                     .binding(0.6, () -> stepUp, newVal -> stepUp = newVal)
                     .controller(option -> doubleSliderController(option, 0, 10, 0.1))
                     .build())
                 .option(Option.<Double>createBuilder()
-                    .name(Text.of("Boat Step Height"))
-                    .description(OptionDescription.of(Text.of("The number of blocks that a boat can move up")))
+                    .name(Component.literal("Boat Step Height"))
+                    .description(OptionDescription.of(Component.literal("The number of blocks that a boat can move up")))
                     .binding(0.0, () -> boatStepUp, newVal -> boatStepUp = newVal)
                     .controller(option -> doubleSliderController(option, 0, 10, 0.1))
                     .build())
                 .option(Option.<Integer>createBuilder()
-                    .name(Text.of("Coyote Time"))
-                    .description(OptionDescription.of(Text.of("The number of ticks after falling off of a block that the player can still jump")))
+                    .name(Component.literal("Coyote Time"))
+                    .description(OptionDescription.of(Component.literal("The number of ticks after falling off of a block that the player can still jump")))
                     .binding(0, () -> coyoteTime, newVal -> coyoteTime = newVal)
                     .controller(option -> integerSliderController(option, 0, 100, 1))
                     .build())
                 .option(Option.<Boolean>createBuilder()
-                    .name(Text.of("Elytra Cancel"))
-                    .description(OptionDescription.of(Text.of("The ability to stop using the elytra if the jump key is pressed, like is possible in Bedrock Edition")))
+                    .name(Component.literal("Elytra Cancel"))
+                    .description(OptionDescription.of(Component.literal("The ability to stop using the elytra if the jump key is pressed, like is possible in Bedrock Edition")))
                     .binding(false, () -> elytraCancel, newVal -> elytraCancel = newVal)
                     .controller(TickBoxControllerBuilder::create)
                     .build())
                 .option(Option.<Boolean>createBuilder()
-                    .name(Text.of("Reach Around Block Placement"))
-                    .description(OptionDescription.of(Text.of("The ability to place a block in front of the player, like is possible in Bedrock Edition")))
+                    .name(Component.literal("Reach Around Block Placement"))
+                    .description(OptionDescription.of(Component.literal("The ability to place a block in front of the player, like is possible in Bedrock Edition")))
                     .binding(false, () -> reachAround, newVal -> reachAround = newVal)
                     .controller(TickBoxControllerBuilder::create)
                     .build())

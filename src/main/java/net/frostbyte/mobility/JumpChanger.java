@@ -4,8 +4,8 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.frostbyte.mobility.config.MaximumMobilityConfig;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.LocalPlayer;
 
 @Environment(EnvType.CLIENT)
 public class JumpChanger implements ClientTickEvents.EndTick {
@@ -13,8 +13,8 @@ public class JumpChanger implements ClientTickEvents.EndTick {
     private final double[] yValues = {0, 0};
 
     @Override
-    public void onEndTick(MinecraftClient client) {
-        ClientPlayerEntity player;
+    public void onEndTick(Minecraft client) {
+        LocalPlayer player;
         player = client.player;
 
         if (player == null) {
@@ -22,16 +22,16 @@ public class JumpChanger implements ClientTickEvents.EndTick {
         }
 
         if (MaximumMobilityConfig.coyoteTime != 0) {
-            if (player.isOnGround()){
+            if (player.onGround()){
                 yValues[0] = player.getY();
                 yValues[1] = player.getY();
             }
 
-            if (!player.isOnGround()) {
+            if (!player.onGround()) {
                 yValues[1] = player.getY();
                 fallingTicks ++;
-                if (fallingTicks < MaximumMobilityConfig.coyoteTime && player.jumping && yValues[1] < yValues[0]) {
-                    player.jump();
+                if (fallingTicks < MaximumMobilityConfig.coyoteTime && player.isJumping() && yValues[1] < yValues[0]) {
+                    player.jumpFromGround();
                     fallingTicks = MaximumMobilityConfig.coyoteTime;
                 }
             } else {
