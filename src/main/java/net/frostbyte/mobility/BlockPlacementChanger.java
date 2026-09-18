@@ -16,6 +16,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 
@@ -43,7 +44,7 @@ public class BlockPlacementChanger implements ClientTickEvents.EndTick, HudEleme
                 && Objects.requireNonNull(client.level).getBlockState(getTargetPos(client.player)).is(BlockTags.REPLACEABLE);
             if (canPlace && client.options.keyUse.isDown()) {
                 if (client.gameMode != null && client.gameMode.useItemOn(client.player, client.player.getUsedItemHand(), new BlockHitResult(client.player.position(), client.player.getDirection().getOpposite(), getTargetPos(client.player), false)) instanceof InteractionResult.Success) {
-                    client.player.swing(client.player.getUsedItemHand());
+                    client.player.swing(client.player.getUsedItemHand(), SwingAnimation.DEFAULT, true);
                 }
             }
         }
